@@ -31,9 +31,9 @@ function isHolidayDay() {
             'week_day'=>'4', 'mon_week'=>'4', 'to_mon_day'=>'')
     );
 
-    //$curDate = new DateTime();
+    $curDate = new DateTime();
 
-    $curDate = DateTime::createFromFormat('d-m-Y', '19-11-2020');
+    //$curDate = DateTime::createFromFormat('d-m-Y', '19-11-2020');
     foreach ($holidays as &$value) {
         if($value['mon'] == $curDate->format("m")){
             if(!empty($value['from_mon_day'])){
